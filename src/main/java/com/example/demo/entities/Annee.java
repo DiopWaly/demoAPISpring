@@ -1,8 +1,6 @@
 package com.example.demo.entities;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,11 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@SuppressWarnings("serial")
 @Entity
 public class Annee implements Serializable {
-
-//	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-//	String dateStr = sdf.format(new Date());
+	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	

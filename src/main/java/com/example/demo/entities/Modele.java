@@ -2,7 +2,6 @@ package com.example.demo.entities;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -10,10 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@SuppressWarnings("serial")
 @Entity
 public class Modele implements Serializable {
 
@@ -83,5 +82,12 @@ public class Modele implements Serializable {
 	public void setAnnee(Annee annee) {
 		this.annee = annee;
 	}
+
+	@Override
+	public String toString() {
+		return "Modele [id=" + id + ", libelle=" + libelle + ", marque=" + marque + ", categorie=" + categorie
+				+ ", annee=" + annee + "]";
+	}
+	
 	
 }
