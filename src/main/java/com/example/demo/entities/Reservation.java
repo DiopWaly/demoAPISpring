@@ -40,8 +40,11 @@ public class Reservation implements Serializable {
 	private Chauffeur chauffeur;
 	private float tarif;
 	private String lieudisposition;
+	@Column(nullable = false)
 	private Long cli;
+	@Column(nullable = false)
 	private Long c;
+	@Column(nullable = false)
 	private Long v;
 	
 	public Client getClient() {
