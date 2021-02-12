@@ -10,8 +10,6 @@ import javax.imageio.ImageIO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.demo.entities.Client;
 import com.example.demo.repositories.ClientRepository;
@@ -36,6 +34,7 @@ public class ClientService {
 	}
 	
 	public Client save(Client c) {
+		hashagepw(c);
 		return rep.save(c);
 	}
 	
